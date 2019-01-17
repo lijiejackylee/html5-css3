@@ -1,0 +1,10 @@
+h2 {
+    padding: 20px 0px;
+}
+.myCanvas, svg {
+    border: dotted 2px black;
+    width: 400px;
+    height: 400px;
+}
+
+
