@@ -10,11 +10,11 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let videoEl = document.getElementsByTagName('video')[0],
-    playPauseBtn = document.getElementById('playPause'),
-    vidControls = document.getElementById('controls'),
-    muteBtn = document.getElementById('muteUnmute'),
-    timeHolder = document.getElementById('timer');
+    // let videoEl = document.getElementsByTagName('video')[0],
+    // playPauseBtn = document.getElementById('playPause'),
+    // vidControls = document.getElementById('controls'),
+    // muteBtn = document.getElementById('muteUnmute'),
+    // timeHolder = document.getElementById('timer');
   
     // videoEl.removeAttribute('controls');
     // videoEl.addEventListener('canplaythrough',function(){
@@ -27,12 +27,12 @@ export class HomeComponent implements OnInit {
     //     videoEl.pause();
     //   }
     // }, false);
-    videoEl.addEventListener('play',function(){
-      playPauseBtn.classList.add('playing');
-    },false);
-    videoEl.addEventListener('pause', function(){
-      playPauseBtn.classList.remove('playing');
-    },false);
+    // videoEl.addEventListener('play',function(){
+    //   playPauseBtn.classList.add('playing');
+    // },false);
+    // videoEl.addEventListener('pause', function(){
+    //   playPauseBtn.classList.remove('playing');
+    // },false);
 
     // muteBtn.addEventListener('click',function(){
     //   if(videoEl.muted) {
@@ -41,21 +41,21 @@ export class HomeComponent implements OnInit {
     //     videoEl.muted = true;
     //   }
     // }, false);
-    videoEl.addEventListener('volumechange', function() {
-      if(videoEl.muted) {
-        muteBtn.classList.add('muted');
-      } else {
-        muteBtn.classList.remove('muted');
-      }
-    }, false);
+    // videoEl.addEventListener('volumechange', function() {
+    //   if(videoEl.muted) {
+    //     muteBtn.classList.add('muted');
+    //   } else {
+    //     muteBtn.classList.remove('muted');
+    //   }
+    // }, false);
 
-    videoEl.addEventListener('ended', function() {
-      videoEl.currentTime = 0;
-    }, false);
+    // videoEl.addEventListener('ended', function() {
+    //   videoEl.currentTime = 0;
+    // }, false);
 
-    videoEl.addEventListener('timeupdate', function() {
-      timeHolder.innerHTML = secondsToTime(videoEl.currentTime);
-    }, false);
+    // videoEl.addEventListener('timeupdate', function() {
+    //   timeHolder.innerHTML = secondsToTime(videoEl.currentTime);
+    // }, false);
     
     function secondsToTime(s: any) {
       let h = Math.floor(s/(60*60)),
@@ -89,8 +89,5 @@ export class HomeComponent implements OnInit {
 
     
     
-  }
-  
-  
-  
+  } 
 }
