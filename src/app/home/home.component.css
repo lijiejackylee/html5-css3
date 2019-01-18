@@ -57,6 +57,7 @@ article h2 {
 
 .content {
     -webkit-columns: 3 9em;
+    columns: 3 9em;
     -webkit-column-gap: 10px;
     -moz-column-count: 3;
     -moz-column-width: 9em;
@@ -237,10 +238,13 @@ aside > article:nth-of-type(2) p,
     display: block;
     margin: auto;
     -webkit-animation: bike steps(4, start) infinite 0.4s, move linear infinite 8s;
+    animation: bike steps(4, start) infinite 0.4s, move linear infinite 8s;
     -webkit-animation-play-state: paused; 
+    animation-play-state: paused;
 }
 .ad-ad3 h1:hover:after {
     -webkit-animation-play-state: running; 
+    animation-play-state: running; 
 }
 .ad-ad3 a {
   text-decoration: none; 

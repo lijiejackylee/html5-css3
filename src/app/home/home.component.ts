@@ -17,16 +17,16 @@ export class HomeComponent implements OnInit {
     timeHolder = document.getElementById('timer');
   
     // videoEl.removeAttribute('controls');
-    videoEl.addEventListener('canplaythrough',function(){
-      vidControls.classList.remove('hidden');
-    },false);
-    playPauseBtn.addEventListener('click',function(){
-      if (videoEl.pause) {
-        videoEl.play();
-      } else {
-        videoEl.pause();
-      }
-    }, false);
+    // videoEl.addEventListener('canplaythrough',function(){
+    //   vidControls.classList.remove('hidden');
+    // },false);
+    // playPauseBtn.addEventListener('click',function(){
+    //   if (videoEl.pause) {
+    //     videoEl.play();
+    //   } else {
+    //     videoEl.pause();
+    //   }
+    // }, false);
     videoEl.addEventListener('play',function(){
       playPauseBtn.classList.add('playing');
     },false);
@@ -34,13 +34,13 @@ export class HomeComponent implements OnInit {
       playPauseBtn.classList.remove('playing');
     },false);
 
-    muteBtn.addEventListener('click',function(){
-      if(videoEl.muted) {
-        videoEl.muted = false;
-      } else {
-        videoEl.muted = true;
-      }
-    }, false);
+    // muteBtn.addEventListener('click',function(){
+    //   if(videoEl.muted) {
+    //     videoEl.muted = false;
+    //   } else {
+    //     videoEl.muted = true;
+    //   }
+    // }, false);
     videoEl.addEventListener('volumechange', function() {
       if(videoEl.muted) {
         muteBtn.classList.add('muted');
